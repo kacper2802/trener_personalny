@@ -1,0 +1,577 @@
+/* Resetowanie marginesów i paddingów dla wszystkich elementów!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+* {
+    margin: 0; /* Usuwa domyślne marginesy */
+    padding: 0; /* Usuwa domyślne odstępy */
+    box-sizing: border-box; /* Ustawia model pudełkowy, aby padding i border były wliczane do wymiarów elementu */
+    font-family: 'Poppins', sans-serif; /* Ustawia czcionkę Roboto dla wszystkich elementów */
+    
+    
+}
+
+
+
+
+
+
+
+
+
+/* Stylowanie nagłówka i nawigacji!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+header {
+    position: fixed; /* Ustawia nagłówek jako fixed, aby zawsze był na górze strony */
+    width: 100%; /* Ustawia szerokość na 100%, aby zajmował całą szerokość strony */
+    background: rgba(51, 51, 51, 0.8); /* Ustawia tło na ciemnoszary kolor z 80% przezroczystości */
+    color: #fff; /* Ustawia kolor tekstu na biały */
+    z-index: 1000; /* Ustawia wysoki z-index, aby nagłówek był zawsze na wierzchu */
+    transition: background 0.3s ease; /* Ustawia płynne przejście koloru tła */
+    height: 100px; /* Ustawia wysokość nagłówka */
+    line-height: 50px; /* Ustawia wysokość linii tekstu, co wpływa na pionowe wyśrodkowanie tekstu */
+    display: block; /* Ustawia nagłówek jako blokowy element (domyślnie) */
+    align-items: center; /* Wyrównuje elementy w pionie na środku (działa tylko dla flexbox) */
+}
+
+nav {
+    display: flex; /* Ustawia elastyczny model pudełkowy dla nawigacji */
+    justify-content: space-between; /* Rozkłada elementy w nawigacji, pozostawiając maksymalną przestrzeń między nimi */
+    align-items: center; /* Wyrównuje elementy w pionie na środku */
+    padding: 1rem 2rem; /* Dodaje padding 1rem od góry i dołu oraz 2rem od lewej i prawej strony */
+    height: 100%; /* Ustawia wysokość nawigacji na 100% wysokości rodzica */
+}
+
+.nav-logo {
+    font-size: 1.5rem; /* Ustawia rozmiar czcionki loga */
+}
+
+#logo {
+    width: 100px; /* Ustawia szerokość logo */
+    height: auto; /* Automatycznie dostosowuje wysokość logo */
+    margin-top: 15px; /* Dodaje margines u góry, przesuwając logo w dół */
+}
+
+.nav-links {
+    display: flex; /* Ustawia elastyczny model pudełkowy dla listy linków */
+    list-style: none; /* Usuwa wypunktowanie listy */
+}
+
+.nav-links li {
+    margin: 0 1rem; /* Ustawia margines 1rem po lewej i prawej stronie linków */
+}
+
+.nav-links a {
+    color: #fff; /* Ustawia kolor tekstu linków na biały */
+    text-decoration: none; /* Usuwa podkreślenie tekstu linków */
+    transition: color 0.3s ease; /* Ustawia płynne przejście koloru tekstu linków */
+}
+
+.nav-links a:hover {
+    color: #61c0d8; /* Ustawia kolor tekstu linków na jasnoniebieski po najechaniu */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Stylowanie ikon społecznościowych!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.social-icons {
+    display: flex; /* Ustawia elastyczny model pudełkowy dla ikon */
+    align-items: center; /* Wyrównuje ikony w pionie do środka */
+}
+
+.social-icons a {
+    color: #fff; /* Ustawia kolor ikon na biały */
+    margin: 0 0.5rem; /* Ustawia margines 0.5rem po lewej i prawej stronie ikon */
+    transition: color 0.3s ease; /* Ustawia płynne przejście koloru ikon */
+}
+
+.social-icons a:hover {
+    color: #61c0d8; /* Ustawia kolor ikon na jasnoniebieski po najechaniu */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Stylowanie przycisku menu!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.menu-toggle {
+    display: none; /* Ukrywa przycisk menu na większych ekranach */
+    background: none; /* Usuwa tło przycisku */
+    border: none; /* Usuwa obramowanie przycisku */
+    color: #fff; /* Ustawia kolor przycisku na biały */
+    font-size: 1.5rem; /* Ustawia rozmiar czcionki przycisku */
+    
+}
+
+
+
+
+
+
+/* Efekt zmiany koloru nagłówka!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.scrolled {
+    background: rgba(85, 85, 85, 0.9) !important; /* Zmienia tło nagłówka po przewinięciu */
+}
+
+
+/* Media queries dla responsywności */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Ukrywa linki nawigacyjne na urządzeniach mobilnych */
+        flex-direction: column; /* Ustawia linki w kolumnie */
+        background: rgba(51, 51, 51, 0.8); /* Ustawia tło na ciemnoszary kolor z 80% przezroczystości */
+        position: absolute; /* Ustawia pozycję absolutną dla linków */
+        top: 100%; /* Ustawia pozycję od góry na 100% */
+        left: 0; /* Ustawia pozycję od lewej na 0 */
+        width: 100%; /* Ustawia szerokość na 100% */
+        text-align: center; /* Wyrównuje tekst do środka */
+    }
+
+    .nav-links.active {
+        display: flex; /* Wyświetla linki nawigacyjne gdy są aktywne */
+    }
+
+    .menu-toggle {
+        display: block; /* Wyświetla przycisk menu na urządzeniach mobilnych */
+    }
+
+    #typewriter-text {
+        font-size: 1.2rem; /* Zmniejsza rozmiar czcionki tekstu typera */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Sekcje strony!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+section {
+    padding: 5rem 2rem; /* Ustawia padding 5rem od góry i dołu, 2rem od lewej i prawej */
+    min-height: 100vh; /* Ustawia minimalną wysokość sekcji na 100% wysokości widoku */
+}
+
+
+
+
+
+
+
+/* Sekcja Strona Główna!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+#home {
+    background: url('assets/background.jpg') no-repeat center center/cover; /* Ustawia tło sekcji jako obrazek */
+    color: #fff; /* Ustawia kolor tekstu na biały */
+    text-align: center; /* Wyrównuje tekst do środka */
+    display: flex; /* Ustawia elastyczny model pudełkowy dla sekcji */
+    align-items: center; /* Wyrównuje elementy w pionie do środka */
+    justify-content: center; /* Wyrównuje elementy w poziomie do środka */
+    
+}
+
+.POMOGĘ {
+    margin-top: 40px; /* Dodaje odstęp od elementu .auto-type */
+    font-weight: 100;
+}
+
+.cta-button {
+    font-family: Arial, sans-serif;
+    font-size: 0.5em; /* Rozmiar czcionki */
+    font-weight: bold;
+    color: #fdcccc; /* Kolor tekstu */
+    background-color: transparent; /* Przezroczyste tło */
+    border: 2px solid #333; /* Cienka czarna ramka */
+    border-radius: 8px; /* Zaokrąglone rogi */
+    padding: 15px 30px; /* Wewnętrzne odstępy */
+    cursor: pointer; /* Wskaźnik kursora zmienia się na wskaźnik */
+    transition: all 0.3s ease; /* Płynna zmiana stylu */
+    text-transform: uppercase; /* Wszystkie litery wielkie */
+    margin-top: 50px;
+}
+
+.cta-button:hover {
+    background-color: #fff; /* Białe tło na hover */
+    color: #333; /* Czarny tekst na hover */
+    border-color: #fff; /* Biała ramka na hover */
+}
+
+h1 {
+    color: white; /* Ustawia kolor tekstu na biały */
+}
+
+/* Efekt typera!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .auto-type {
+    font-size: 50px;
+    border-right: 0.15em solid #fff724;
+    animation: blink-caret 0.75s step-end infinite;
+  }
+
+  .typed-cursor {
+    display: none; /* Hide the default cursor provided by Typed.js */
+  }
+
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #fff724; }
+  }
+
+#about, #services, #testimonials, #contact {
+    background: #f4f4f4; /* Ustawia tło sekcji na jasnoszary kolor */
+    text-align: center; /* Wyrównuje tekst do środka */
+    background: url('assets/background2.jpg') no-repeat center center/cover; /* Ustawia tło sekcji jako obrazek */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Sekcja About!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* Kontener dla sekcji */
+#about {
+    padding: 20px;
+}
+
+.about-container {
+    display: flex;
+    align-items: stretch; /* Zapewnia, że oba kafelki mają tę samą wysokość */
+    justify-content: center; /* Wyśrodkowuje kafelki w poziomie */
+    flex-wrap: wrap; /* Pozwala na owinięcie elementów w mniejszych viewportach */
+    gap: 20px; /* Dodaje odstęp między kafelkami */
+    margin-top: 80px;
+}
+
+.about-image, .about-text {
+    flex: 1; /* Zapewnia, że oba kafelki mają tę samą szerokość */
+    max-width: 500px; /* Maksymalna szerokość kafelków */
+    height: 500px; /* Stała wysokość dla obu kafelków */
+    box-sizing: border-box; /* Uwzględnia padding i border w szerokości i wysokości */
+    border-radius: 10px; /* Zaokrąglenie rogów */
+    overflow: hidden; /* Ukrywa nadmiar zawartości */
+    transition: transform 0.3s ease; /* Płynne przejście przy najechaniu */
+}
+
+/* Styl dla obrazu */
+.about-image {
+    background: #f0f0f0; /* Tło dla kafelka obrazka */
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Dopasowuje obraz do kontenera */
+    display: block; /* Usuwa domyślne marginesy obrazka */
+}
+
+/* Styl dla tekstu */
+.about-text {
+    display: flex;
+    justify-content: center; /* Wyśrodkowuje tekst w poziomie */
+    align-items: center; /* Wyśrodkowuje tekst w pionie */
+    padding: 20px; /* Padding wewnętrzny */
+    background: rgba(255, 255, 255, 0.9); /* Tło z przezroczystością */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Cień dla kafelka */
+    font-size: 18px; /* Rozmiar czcionki */
+    color: #000; /* Kolor tekstu */
+    text-align: center; /* Wyśrodkowuje tekst w kontenerze */
+}
+
+/* Efekt hover dla kafelków */
+.about-image:hover, .about-text:hover {
+    transform: translateY(-10px); /* Przesuwa kafelek w górę po najechaniu */
+}
+
+/* Media query dla ekranów o szerokości 768px i mniejszych */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Ustawia kafelki w kolumnie dla mniejszych ekranów */
+    }
+
+    .about-image, .about-text {
+        max-width: 100%; /* Pełna szerokość dla mniejszych ekranów */
+        height: auto; /* Dopasowuje wysokość dla mniejszych ekranów */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Sekcja Oferta!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+#services {
+    padding: 20px 0;
+    background-color: #f9f9f9;
+    text-align: center; /* Centrowanie tekstu w całej sekcji */
+    
+}
+
+
+.offer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.offer-card {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 1rem;
+    flex: 0 1 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.offer-card:hover {
+    transform: translateY(-10px);
+}
+
+.offer-icon i {
+    font-size: 2.5rem; /* Rozmiar ikonki */
+    color: #007bff; /* Kolor ikonki - niebieski */
+    margin-top: 1px;
+    margin: 0 auto 15px; /* Wyśrodkowanie ikonki i odstęp od opisu */
+}
+
+.offer-card h3 {
+    margin-bottom: 1rem;
+}
+
+.offer-card p {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Stylowanie dla mniejszych ekranów (RWD) */
+@media (max-width: 768px) {
+    .offer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Sekcja opinie!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+.opinie {
+    display:block;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.opinie-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 120px;
+   
+}
+
+.prev, .next {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.opinie-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px;
+    width: 80vw; /* Możesz dostosować szerokość */
+    
+}
+
+.opinia {
+    min-width: 300px; /* Dostosuj szerokość kafelka według potrzeb */
+    margin: 0 10px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 20px;
+}
+
+.opinia-img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.opinia-name {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.opinia-text {
+    font-size: 1em;
+    color: #555;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SEKCJA KONTAKT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+.form-container {
+    max-width: 600px; /* Ustawia maksymalną szerokość formularza */
+    margin: 0 auto; /* Wyśrodkowuje formularz */
+}
+
+form {
+    display: flex; /* Ustawia elastyczny model pudełkowy dla formularza */
+    flex-direction: column; /* Ustawia elementy formularza w kolumnie */
+    gap: 1rem; /* Dodaje odstęp między elementami formularza */
+}
+
+label {
+    font-weight: bold; /* Ustawia pogrubienie dla etykiet */
+}
+
+input, textarea {
+    width: 100%; /* Ustawia szerokość pól na 100% kontenera */
+    padding: 0.75rem; /* Dodaje wewnętrzne odstępy */
+    border: 1px solid #ddd; /* Ustawia cienką szaro-srebrną ramkę */
+    border-radius: 4px; /* Zaokrągla rogi pól */
+}
+
+button {
+    background-color: #333; /* Ustawia tło przycisku na ciemnoszary */
+    color: #fff; /* Ustawia kolor tekstu przycisku na biały */
+    border: none; /* Usuwa obramowanie przycisku */
+    padding: 0.75rem 1.5rem; /* Dodaje wewnętrzne odstępy */
+    border-radius: 4px; /* Zaokrągla rogi przycisku */
+    cursor: pointer; /* Ustawia kursor na wskaźnik */
+    font-size: 1rem; /* Ustawia rozmiar czcionki przycisku */
+    transition: background-color 0.3s ease; /* Ustawia płynne przejście koloru tła */
+}
+
+button:hover {
+    background-color: #555; /* Zmienia kolor tła na ciemniejszy na hover */
+}
+
+#form-message {
+    margin-top: 1rem; /* Dodaje margines górny dla komunikatu */
+    font-weight: bold; /* Ustawia pogrubienie komunikatu */
+
+}
+
+#Konsultacja{
+    margin-bottom: 30px;
+}
+
+.contact-info{
+    font-size: 1.2rem;
+    color: #fcfcfc;
+    margin-top: 150px;
+}
+
+.contact-info p{
+    margin-bottom: 15px;
+}
+
+.contact-info i {
+    color: #007bff; /* Zmień na wybrany kolor */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

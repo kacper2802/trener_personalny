@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trenerka Personalna</title>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <!-- Nagłówek, zawiera pasek nawigacyjny -->
+    <header id="main-header">
+        <nav>
+            <!-- Logo -->
+            <div class="nav-logo"><img id="logo" src="assets/logo gotowe.png"></div>
+            <!-- Linki nawigacyjne -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">STRONA GŁÓWNA</a></li>
+                <li><a href="#about">O MNIE</a></li>
+                <li><a href="#services">OFERTA</a></li>
+                <li><a href="#testimonials">OPINIE</a></li>
+                <li><a href="#contact">KONTAKT</a></li>
+            </ul>
+            <!-- Ikony społecznościowe i przycisk menu -->
+            <div class="social-icons">
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <button class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sekcja Strona główna, zawiera powitanie -->
+    <section id="home">
+        <h1>
+            <div class="container">
+                <h1>
+                    <span style="color: #F0F8FF;" class="auto-type"></span>
+                    <div><h5 class="POMOGĘ">POMOGĘ CI PROFESJONALNIE ZREALIZOWAĆ CEL, KTÓRY PRZED SOBĄ STAWIASZ!</h5></div>
+                    <div>
+                        <button class="cta-button" onclick="scrollToConsultation()">ODBIERZ KONSULTACJĘ TRENINGOWĄ</button>
+                    </div>
+                </h1>
+           </div>
+        </h1>
+        
+    </section>
+
+    <!-- Sekcja O mnie -->
+    <section id="about">
+        <h2>O mnie</h2>
+        <div class="about-container">
+            <div class="about-image">
+                <img src="assets/omnie.png" alt="Trener personalny">
+            </div>
+            <div class="about-text">
+                <p><b>Cześć!</b> Nazywam się [Imię i Nazwisko]... Moją pasją jest pomaganie ludziom... W swojej pracy kładę duży nacisk na indywidualne podejście... <b>Zapraszam do współpracy i wspólnego osiągania Twoich celów!</b></p>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+
+
+    <!-- Sekcja Oferta -->
+    <!-- Sekcja Oferta -->
+<section id="services">
+    <h2 id="oferta_nagłówek">Oferta</h2>
+    <div class="offer-container">
+        <div class="offer-card">
+            <div class="offer-icon">
+                <i class="fas fa-dumbbell offer-icon"></i> <!-- Ikonka 1 -->
+            </div>
+            <h3>Trening Personalny</h3>
+            <p>Indywidualne podejście, dostosowane plany treningowe i pełne wsparcie w osiąganiu Twoich celów.</p>
+        </div>
+        <div class="offer-card">
+            <div class="offer-icon">
+                <i class="fas fa-apple-alt offer-icon"></i> <!-- Ikonka 2 -->
+            </div>
+            <h3>Plan Żywieniowy</h3>
+            <p>Skomponowane indywidualnie diety, które pomogą Ci zrealizować swoje cele zdrowotne i sylwetkowe.</p>
+        </div>
+        <div class="offer-card">
+            <div class="offer-icon">
+                <i class="fas fa-laptop-medical offer-icon"></i> <!-- Ikonka 3 -->
+            </div>
+            <h3>Konsultacja Online</h3>
+            <p>Skorzystaj z fachowej porady bez wychodzenia z domu. Oferujemy konsultacje online dla każdego.</p>
+        </div>
+    </div>
+</section>
+
+    
+    
+
+    <!-- Sekcja Opinie -->
+    <section id="testimonials" class="opinie">
+        <h2>Opinie</h2>
+        <div class="opinie-container">
+            <button class="prev" onclick="scrollOpinie(-1)">&#10094;</button>
+            <div class="opinie-wrapper">
+                <div class="opinia">
+                    <img src="assets/twarz.jpg" alt="Zdjęcie 1" class="opinia-img">
+                    <h3 class="opinia-name">Anna Przykładowa</h3>
+                    <p class="opinia-text">To jest przykładowa opinia. Świetna jakość i szybka obsługa!</p>
+                </div>
+                <div class="opinia">
+                    <img src="https://via.placeholder.com/100" alt="Zdjęcie 2" class="opinia-img">
+                    <h3 class="opinia-name">Anna Nowak</h3>
+                    <p class="opinia-text">Bardzo zadowolona z zakupu. Polecam wszystkim!</p>
+                </div>
+                <div class="opinia">
+                    <img src="https://via.placeholder.com/100" alt="Zdjęcie 2" class="opinia-img">
+                    <h3 class="opinia-name">Anna Nowak</h3>
+                    <p class="opinia-text">Bardzo zadowolona z zakupu. Polecam wszystkim!</p>
+                </div>
+                <div class="opinia">
+                    <img src="https://via.placeholder.com/100" alt="Zdjęcie 2" class="opinia-img">
+                    <h3 class="opinia-name">Anna Nowak</h3>
+                    <p class="opinia-text">Bardzo zadowolona z zakupu. Polecam wszystkim!</p>
+                </div>
+                <div class="opinia">
+                    <img src="https://via.placeholder.com/100" alt="Zdjęcie 2" class="opinia-img">
+                    <h3 class="opinia-name">Anna Nowak</h3>
+                    <p class="opinia-text">Bardzo zadowolona z zakupu. Polecam wszystkim!</p>
+                </div>
+                <!-- Dodaj więcej opinii według potrzeb -->
+            </div>
+            <button class="next" onclick="scrollOpinie(1)">&#10095;</button>
+        </div>
+    </section>
+    
+    <!-- Sekcja Kontakt -->
+<section id="contact">
+    <h2 id="Konsultacja">Konsultacja Treningowa</h2>
+    <div class="contact-container">
+        <div class="form-container">
+            <form method="POST" data-netlify="true" name="konsultacja" id="consultation-form">
+                <label for="name">Imię i Nazwisko:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Adres e-mail:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="phone">Numer Telefonu:</label>
+                <input type="tel" id="phone" name="phone" required>
+    
+                <label for="message">Wiadomość:</label>
+                <textarea id="message" name="message" placeholder="Chcę się zapisać na konsultację treningową" required></textarea>
+    
+                <button type="submit">Wyślij</button>
+                <div id="form-message"></div>
+            </form>
+            
+        </div>
+        <div class="contact-info">
+            <p><i class="fas fa-phone"></i> +48 123 456 789</p>
+            <p><i class="fas fa-envelope"></i> kontakt@przyklad.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> ul. Przykładowa 1, 00-000 Miasto</p>
+            <p>&copy; 2024 Twoja Firma</p>
+        </div>
+    </div>
+</section>
+
+
+
+    
+    <!---auto typing efekt!-->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    
+    <!---Javascript!-->
+    <script src="script.js"></script>
+    
+</body>
+</html>
+
